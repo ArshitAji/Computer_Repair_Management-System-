@@ -1,0 +1,73 @@
+#Customer
+
+###
+GET http://127.0.0.1:8000/customers/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/customers/
+Content-Type: application/json
+
+{
+    
+    "customer_name": "Arjun",
+    "phone": "9876533210",
+    "email": "arjun@gmail.com",
+    "place": "Kochi"
+
+}
+
+###
+GET http://127.0.0.1:8000/customers/1/
+Accept: application/json
+
+###
+PUT http://127.0.0.1:8000/customers/2/
+Accept: application/json
+Content-Type: application/json
+
+{
+    "customer_name": "Arjun Updated",
+    "phone": "9876533210",
+    "email": "arjun@gmail.com",
+    "place": "Kochi"
+}
+
+###
+DELETE http://127.0.0.1:8000/customers/2/
+
+#Repair
+
+###
+GET http://127.0.0.1:8000/repairs/
+Accept: application/json
+
+###
+POST http://127.0.0.1:8000/repairs/
+Content-Type: application/json
+
+{
+    "customer": 3,
+    "device_name": "Dell Laptop",
+    "problem_description": "Battery not working",
+    "repair_status": "Pending",
+    "repair_charge": "4000.00"
+}
+
+###
+GET http://127.0.0.1:8000/repairs/1/
+
+###
+PUT http://127.0.0.1:8000/repairs/1/
+Content-Type: application/json
+
+{
+    "customer": 1,
+    "device_name": "HP Laptop",
+    "problem_description": "Keyboard not working",
+    "repair_status": "In Progress",
+    "repair_charge": "2000.00"
+}
+
+###
+DELETE http://127.0.0.1:8000/repairs/1/
